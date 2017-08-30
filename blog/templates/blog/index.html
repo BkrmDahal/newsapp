@@ -1,0 +1,20 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    {% for post in posts %}
+<div class="container bg-grey articles">
+  <div class="row">
+    <div class="col-sm-4">
+      <span class="thumbnail">
+        <img src={{post.image_url}} alt={{post.title}} width="400"></span>
+    </div>
+    <div class="col-sm-8">
+      <h2>{{ post.title }}</h2>
+      <h6>{{post.pub_date}}</h6>
+      <h4>{{post.description}}.</h4>
+      <h6><a href = {{post.url}}>Read more at {{post.source}}</a></h6>
+    </div>
+  </div>
+</div>
+{% endfor %}
+{% endblock %}

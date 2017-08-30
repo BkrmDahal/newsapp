@@ -1,0 +1,89 @@
+{% load staticfiles %}
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>Newsapp</title>
+  <meta charset="utf-8">
+  
+  <link rel="icon" href="http://sstatic.net/stackoverflow/img/favicon.ico">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="https://image.ibb.co/gBe5NQ/logo.jpg">
+  <link rel="stylesheet" href="{% static 'css/index.css' %}" />
+  
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#myPage"><img src="https://image.ibb.co/gBe5NQ/logo.jpg" alt="logo" border="0" class="img-circle" width="30" height="30"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#about">CONTACT US</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<hr class="divider">
+
+
+<div class = "container-fluid">
+
+  {% block content %}
+            {% endblock %}
+</div>
+<!-- Container (Contact Section) -->
+<div id="contact" class="container bg-grey">
+  <h2 class="text-center">CONTACT</h2>
+  <div class="row">
+    <div class="col-sm-5">
+      <p>Contact us and we'll get back to you within 24 hours.</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span> Yangon, MM</p>
+      <p><span class="glyphicon glyphicon-phone"></span> +97 0000000</p>
+      <p><span class="glyphicon glyphicon-envelope"></span> email@email.com</p>
+    </div>
+    <div class="col-sm-7 slideanim">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <button class="btn btn-default pull-right" type="submit">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="container-fluid text-center">
+  <a href="#myPage" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <p>Made by  <a href="https://www.newsapp.com" title="visit newsapp">newsapp</a></p>
+</footer>
+
+<script src="{% static 'js/index.js' %}">
+
+</script>
+
+</body>
+</html>
